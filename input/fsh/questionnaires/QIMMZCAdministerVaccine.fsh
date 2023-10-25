@@ -69,5 +69,5 @@ Usage: #definition
 
   * insert Question(reasonNotDone, Reason vaccine was not administered,choice,true,false)
   * item[=]
-    * answerValueSet = Canonical(ReasonVaccineNotAdministered)
+    * answerValueSet = Canonical(ImmunizationStatusCodes)
   
