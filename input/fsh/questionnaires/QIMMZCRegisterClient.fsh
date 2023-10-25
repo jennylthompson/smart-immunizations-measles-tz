@@ -33,7 +33,7 @@ Usage: #definition
     * code[+] = $LNC#45392-8 "First name"
     * code[+] = $SCT#184095009 "Patient forename (observable entity)"
 
-  * insert Question(familyName, Family name,string,false,false)
+  * insert Question(surname, Surname,string,false,false)
   * item[=]
     * code[+] = IMMZ.C#DE4
     * code[+] = $LNC#45394-4 "Surname"
@@ -67,7 +67,7 @@ Usage: #definition
   * item[=]
     * code[+] = IMMZ.C#DE16
 
-  * insert Question(familyName, Surname,string,false,false)
+  * insert Question(surname, Surname,string,false,false)
   * item[=]
     * code[+] = IMMZ.C#DE17
 
@@ -82,10 +82,4 @@ Usage: #definition
   * code[+] = IMMZ.C#DE19
   * code[+] = $LNC#56799-0 "Address"
   * code[+] = $SCT#184097001 "Patient address (observable entity)"
-
-
-* insert Question(healthWorker, Health Worker,boolean,true,false)
-* item[=]
-  * code[+] = IMMZ.C#DE20
-
 
