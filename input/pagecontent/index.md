@@ -1,4 +1,4 @@
-This draft, test immunization implementation guide details how to use Health Level 7 (HL7) Fast Healthcare Interoperability Resources (FHIR) for consistent digital representation of immunization services.
+This draft, test immunization implementation guide details how to use Health Level 7 (HL7) Fast Healthcare Interoperability Resources (FHIR) for consistent digital representation of immunization services. 
 
 <div>
 <p> This implementation guide and set of artifacts are still undergoing development. </p>
