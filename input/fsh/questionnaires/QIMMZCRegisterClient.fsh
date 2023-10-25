@@ -26,11 +26,6 @@ Usage: #definition
   * code[+] = IMMZ.C#DE2
   * code[+] = $LNC#54125-0 "Patient name"
   * code[+] = $SCT#371484003 "Patient name (observable entity)"
-  * insert Question(fullName, Full name of the client,string,true,false)
-  * item[=]
-    * code[+] = IMMZ.C#DE2
-    * code[+] = $LNC#54125-0 "Patient name"
-    * code[+] = $SCT#371484003 "Patient name (observable entity)"
 
   * insert Question(firstName, First or given name,string,false,false)
   * item[=]
@@ -41,7 +36,7 @@ Usage: #definition
   * insert Question(familyName, Family name,string,false,false)
   * item[=]
     * code[+] = IMMZ.C#DE4
-    * code[+] = $LNC#45394-4 "Last name"
+    * code[+] = $LNC#45394-4 "Surname"
     * code[+] = $SCT#184096005 "Patient surname (observable entity)"
 
 
@@ -72,7 +67,7 @@ Usage: #definition
   * item[=]
     * code[+] = IMMZ.C#DE16
 
-  * insert Question(familyName, Family name,string,false,false)
+  * insert Question(familyName, Surname,string,false,false)
   * item[=]
     * code[+] = IMMZ.C#DE17
 
@@ -82,7 +77,7 @@ Usage: #definition
   * code[+] = $LNC#42077-8 "Patient Phone number"
   * code[+] = $SCT#184103008 "Patient telephone number (observable entity)"
 
-* insert Question(administrativeArea, Administrative area,choice,false,false)
+* insert Question(organizationUnit, Organization unit,choice,false,false)
 * item[=]
   * code[+] = IMMZ.C#DE19
   * code[+] = $LNC#56799-0 "Address"
