@@ -1,5 +1,5 @@
 ValueSet: ReasonVaccineNotAdministered
-Id: reason-vaccine-not-administered
+Id: ReasonVaccineNotAdministered
 Title: "Reason vaccine not administered"
 Description: "The reason this immunization event was not performed"
 * ^status = #draft
