@@ -49,7 +49,7 @@ Usage: #definition
     * answerValueSet = Canonical(ImmunizationStatusCodes)
   * insert Question(datetime, Date/Time,dateTime,true,false)
   * insert Question(vaccine-type, Vaccine Type,choice,true,false)
-    * answerValueSet = Canonical(AllVaccineTypes)
+    * answerValueSet = Canonical(IMMZ.Z.DE9)
   * item[=]
     * answerValueSet = Canonical(AllVaccineTypes)
   
