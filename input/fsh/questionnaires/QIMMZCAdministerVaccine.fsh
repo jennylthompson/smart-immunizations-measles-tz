@@ -51,7 +51,7 @@ Usage: #definition
   * insert Question(vaccine-type, Vaccine Type,choice,true,false)
     * answerValueSet = Canonical(AllVaccineTypes)
   * item[=]
-    * answerValueSet = Canonical(VSMeaslesVaccineProducts)
+    * answerValueSet = Canonical(AllVaccineTypes)
   
   * item[+]
     * text = "Administered Product"
