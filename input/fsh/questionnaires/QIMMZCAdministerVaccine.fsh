@@ -58,7 +58,6 @@ Usage: #definition
     * linkId = "administered-product"
     * type = #group
    
-
     * insert Question(product-code, Product Code,choice,true,false)
     * item[=]
       * answerValueSet = Canonical(VSMeaslesVaccineProducts)
@@ -68,7 +67,7 @@ Usage: #definition
     * insert Question(product-expirydate, Expiration date,string,false,false)
     * item[=]
 
-  * insert Question(reasonNotDone, Reason vaccine was not administered,choice,true,false)
-  * item[=]
-    * answerValueSet = Canonical(ImmunizationStatusCodes)
+    * insert Question(reasonNotDone, Reason vaccine was not administered,choice,true,false)
+    * item[=]
+      * answerValueSet = Canonical(ImmunizationStatusCodes)
   
