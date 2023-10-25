@@ -4,7 +4,7 @@ Title: "Reason vaccine not administered"
 Description: "The reason this immunization event was not performed"
 * ^status = #draft
 * ^experimental = false
-* ^immutable = true
+//* ^immutable = true
 //fill in codes, check AL_CodeSystems.fsh for the short names of the codesystem
 * $ICD11#QC04.Y 
 * $ICD11#QC04.Y 
