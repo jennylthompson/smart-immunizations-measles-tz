@@ -79,3 +79,16 @@ Description: "ICD-11."
 * #XM0NS8 "Varicella, live attenuated"
 * #XM3418 "Yellow Fever, live attenuated"
 * #XM5DF6 "COVID-19 vaccines, live attenuated virus"
+
+* $ICD11#QC04.Y “Medical precaution”
+* $ICD11#QC04.7 “Product out of stock”
+* $ICD11#QC04.5 “Client objection”
+* $ICD11#QC04.6 “Caregiver refusal”
+* $ICD11#QC04.Z “Unspecified reason”
+* $ICD11#QC04.4 “Client allergy to vaccine or component”
+* $ICD11#QC04.3 “Immunocompromised”
+* $ICD11#QC04.2 “Chronic illness or condition”
+* $ICD11#QC04.1 “Acute illness”
+* $ICD11#QC04.0 “Had the disease”
+* $ICD11#QC04.Y “Immunization not carried out for other reasons”
+
