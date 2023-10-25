@@ -1,6 +1,6 @@
 /*
  * Library: IMMZD2DTMeasles (IMMZ.D2.DT.Measles)
- * Rule: If the child or patient has not been given MCV1 (at 9 months) and MCV2 (between 15-18 months) vaccination 
+ * Rule: If the child or patient has not been given MCV1 (at 9 months) and MCV2 at 18 months or older vaccination 
  * Trigger: Patient has never received measles vaccination
  */
 library IMMZD2DTMeasles
@@ -34,7 +34,7 @@ define "Provision of the MCV dose":
 		//	"Needs Supplementary MCV Dose" and "Supplementary MCV Dose Administered to Patient" is null
 		//)
 	)
-	//and IMMZCom."Current Patient Age In Years" < 15
+	and IMMZCom."Current Patient Age In Years" <= 5
 
 define "Schedule Due Date for MCV dose":
 	if IMMZCom."Date of Latest Live Attenuated Vaccine" is null or "Expected Due Date for MCV dose" > IMMZCom."Date of Latest Live Attenuated Vaccine" + 4 weeks
@@ -43,14 +43,10 @@ define "Schedule Due Date for MCV dose":
 
 define "Expected Due Date for MCV dose":
 	case 
-	//when "Needs Zero MCV Dose"
-	//	then Patient.birthDate + 6 months
 	when "No MCV Doses Administered to Patient"
 		then if "High Transmission Setting" then Patient.birthDate + 9 months else Patient.birthDate + 12 months
-	//when "Second MCV Dose Administered to Patient" is not null and "Needs Supplementary MCV Dose"
-	//	then "Date Second MCV Dose Administered to Patient" + 4 weeks
 	when "First MCV Dose Administered to Patient" is not null
-		then Patient.birthDate + 15 months
+		then Patient.birthDate + 18 months
 	else null
 	end
 
@@ -207,7 +203,7 @@ define "Date First MCV Dose Administered to Patient":
 define "Second MCV Dose Administered to Patient":
   Last("MCV Doses Administered to Patient" I 
 		where I.occurrence after "Date First MCV Dose Administered to Patient" + 4 weeks 
-			and I.occurrence after Patient.birthDate + 15 months)
+			and I.occurrence after Patient.birthDate + 18 months)
 
 /**
  * @dataElement Date second MCV dose administered
@@ -310,12 +306,12 @@ define "Should vaccinate patient for measles because no doses in a 2 dose scheme
  * References:
  * 	- WHO recommendations for routine immunization - summary tables: https://www.who.int/teams/immunization-vaccines-and-biologicals/policies/who-recommendations-for-routine-immunization---summary-tables
  * Logic:
- *	 (((("Measles vaccine immunization history" = "1-dose" = true) and ("Current Patient Age in Months" >= 15)) and ("Date last Measles dose given" >= "4 weeks")) and ("Pregnancy Status" = false))
+ *	 (((("Measles vaccine immunization history" = "1-dose" = true) and ("Current Patient Age in Months" >= 18)) and ("Date last Measles dose given" >= "4 weeks")) and ("Pregnancy Status" = false))
  */
  /*
 define "Should vaccinate patient for measles because 1 dose in a 2 dose scheme":
 	IMMZCom."Number of MCV Doses Administered to Patient" = 1 and
-	IMMZCom."Current Patient Age In Months" >= 15 and
+	IMMZCom."Current Patient Age In Months" >= 18 and
 	IMMZCom."Date Last MCV Dose Administered to Patient" more than 4 'week' before Today() and
 	not (IMMZCom."Pregnant")
 */
