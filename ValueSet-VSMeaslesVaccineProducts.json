@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "VSMeaslesVaccineProducts",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-VaccineProducts.html\"><code>http://moh.catopiatz/ig/smart-immunizations-measles-tz/CodeSystem/VaccineProducts</code></a></li></ul></div>"
+  },
+  "url" : "http://moh.catopiatz/ig/smart-immunizations-measles-tz/ValueSet/VSMeaslesVaccineProducts",
+  "version" : "0.1.0",
+  "name" : "VSMeaslesVaccineProducts",
+  "title" : "MeaslesVaccine Products ValueSet",
+  "status" : "draft",
+  "date" : "2023-10-26T10:45:10+00:00",
+  "publisher" : "JLT",
+  "contact" : [{
+    "name" : "JLT",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://moh.catopiatz"
+    }]
+  }],
+  "description" : "Vaccine Product Codes - representing the codes of the products currently available.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://moh.catopiatz/ig/smart-immunizations-measles-tz/CodeSystem/VaccineProducts"
+    }]
+  }
+}
